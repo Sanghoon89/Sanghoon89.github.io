@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>분리된 HTML</title>
+  <script src="../js/includeHTML.js"></script>
+  <script src="../js/includeRouter.js"></script>
+</head>
+<body>
+  Start
+  <header include-html="./header.html"></header>
+  <nav include-html="./nav.html"></nav>
+  <article include-html="./article.html"></article>
+  <footer include-html="./footer.html"></footer>
+</body>
+<script>
+includeHTML( function () {
+  includeRouter( function () {
+    // do something in the future
+  });
+});
+</script>
+</html>
