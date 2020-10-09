@@ -1,30 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>My Test - IDCS List</title>
-        <meta charset="utf-8">
-    </head>
+  <head>
+    <title>My Test - IDCS List</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./idcs-style.css">
+  </head>
 
-    <body>
-        <h1><a href="../index.html">MyTest</a></h1> <hr>
+  <body>
+    <h1><a href="../index.html">MyTest</a></h1>
+    <div id="grid">
+      <ol id="navi">
+        <li><a href="../1.html">HTML</a></li>
+        <li><a href="../2.html">CSS</a></li>
+        <li><a href="../3.html">JavaScript</a></li>
+        <li><a href="./idcs-index.html" id="active">IDCS</a></li>
+      </ol>
+      <div id="article">
         <img src="./Image/Interpark_logo.png" alt="Interpark Logo">
         <h4><a href="./idcs-all.html"> - Expand All Menu</a></h4>
         <ul><h4>System Management</h4></ul>
         <ol>
-            <li><a href="./idcs-1.html">Initial Configuration</a></li> <br>
-            <li><a href="./idcs-2.html">System Configuration</a></li> <br>
-            <li><a href="./idcs-3.html">Software Intallation</a></li> <br>
-            <strong>
-            <li><strong>System Management</strong></li>
-            <ol>
-                <li>Check System Dump Size (AIX Only)</li> <br>
-                <li>Increasing paging space (AIX Only)</li> <br>
-                <li>Installing & configuring Rundeck</li> <br>
-                <li>perfMonitor Setup (After startup DBMS)</li> <br>
-                <li>backup OS Environment (for AIX)</li> <br>
-            </ol>
-            <ul><a href="./idcs-index.html">Q. Return to the Previous (Main Menu)</a></ul>
-            </strong><br>
+          <li><a href="./idcs-1.html">Initial Configuration</a></li> <br>
+          <li><a href="./idcs-2.html">System Configuration</a></li> <br>
+          <li><a href="./idcs-3.html">Software Intallation</a></li> <br>
+          <li id="active">System Management</li>
+          <ol>
+            <li>Check System Dump Size (AIX Only)</li> <br>
+            <li>Increasing paging space (AIX Only)</li> <br>
+            <li>Installing & configuring Rundeck</li> <br>
+            <li>perfMonitor Setup (After startup DBMS)</li> <br>
+            <li>backup OS Environment (for AIX)</li> <br>
+          </ol>
+          <ul><a href="./idcs-index.html">Q. Return to the Previous (Main Menu)</a></ul>
+          <br>
         </ol>
         <ul><a href="./idcs-index.html">Q. Quit</a></ul>
     </body>

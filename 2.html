@@ -3,61 +3,13 @@
   <head>
     <title>My Test - CSS</title>
     <meta charset="utf-8" />
-
-    <style>
-      body {
-        margin: 0;
-      }
-      #active {
-        text-decoration: underline;
-        color: red;
-        font-weight: bold;
-      }
-      a {
-        color: blue;
-        text-decoration: none;
-      }
-      h1 {
-        font-size: 45px;
-        text-align: center;
-        border-bottom: 2px solid gray;
-        margin: 0;
-        padding: 20px;
-      }
-      ol {
-        border-right: 2px solid gray;
-        width: 150px;
-        margin: 0;
-        padding: 20px;
-      }
-      #grid ol{
-        padding-left: 35px;
-      }
-      #grid {
-        display: grid;
-        grid-template-columns: 200px 1fr;
-      }
-      #grid #article {
-        padding-left: 20px;
-      }
-      @media(max-width:1000px) {
-        #grid {
-          display: block
-        }
-        ol {
-          border-right: none;
-        }
-        h1 {
-          border-bottom: none;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="./css-test/style.css">
   </head>
 
   <body>
     <h1><a href="./index.html">MyTest</a></h1>
     <div id="grid">
-      <ol>
+      <ol id="navi">
         <li><a href="./1.html">HTML</a></li>
         <li><a href="./2.html" id="active">CSS</a></li>
         <li><a href="./3.html">JavaScript</a></li>

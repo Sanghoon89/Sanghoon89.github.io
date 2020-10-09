@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+}
+#active {
+  text-decoration: underline;
+  color: red;
+  font-weight: bold;
+}
+a {
+  color: blue;
+  text-decoration: none;
+}
+h1 {
+  font-size: 45px;
+  text-align: center;
+  border-bottom: 2px solid gray;
+  margin: 0;
+  padding: 20px;
+}
+img {
+  text-align: center;
+}
+.bold {
+  font-weight: bold;
+}
+#navi {
+  border-right: 2px solid gray;
+  width: 150px;
+  margin: 0;
+  padding: 20px;
+}
+#grid #navi{
+  padding-left: 35px;
+}
+#grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+#grid #article {
+  padding-left: 20px;
+}
+@media(max-width:800px) {
+  #grid {
+    display: block
+  }
+  #navi {
+    border-right: none;
+  }
+  h1 {
+    border-bottom: none;
+  }
+}
