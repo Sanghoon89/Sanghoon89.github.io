@@ -19,6 +19,7 @@ h1 {
 }
 .bold {
   font-weight: bold;
+  color: black;
 }
 #navi {
   border-right: 2px solid gray;
