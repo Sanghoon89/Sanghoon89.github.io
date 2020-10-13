@@ -19,13 +19,19 @@
         <a href="./idcs-index.html">
           <img src="./Image/Interpark_logo.png" alt="Interpark Logo"></a>
         <h4><a href="./idcs-all.html"> - Expand All Menu</a></h4>
-        <ul><h4>Main Menu</h4></ul>
-        <ol>
-            <li><a href="./idcs-1.html">Initial Configrration</a></li><br>
-            <li><a href="./idcs-2.html">System Configuration</a></li><br>
-            <li><a href="./idcs-3.html">Software Intallation</a></li><br>
-            <li><a href="./idcs-4.html">System Management</a></li><br>
-        </ol>
+        <script>
+          var ListArray = new Array("Main Menu", "Initial Configuation", "System Configration", "Software Installation", "System Management");
+          document.write("<ol>");
+          for (var i=0; i<ListArray.length; i++) {
+            if (i === 0) {
+              document.write("<ul><h4>"+ListArray[i]+"</h4></ul>");
+            } else {
+              document.write("<li><a href=\"./idcs-"+i+".html\">");
+              document.write(ListArray[i]+"</a></li><br>");
+            }
+          }
+          document.write("</ol>");
+        </script>
         <ul><a href="../index.html">Q. Quit</a></ul>
       </div>
     </div>
