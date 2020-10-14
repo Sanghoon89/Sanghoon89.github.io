@@ -1,0 +1,37 @@
+Run JavaScript
+. Event handler (4)
+. <script> (2)
+. console (5)
+
+DataType
+. String (6)
+. Number (6)
+. Variable (7)
+. Boolean (15)
+. Arraty (20,23)
+. Function (24,25,26,27,28)
+. Object (30,31,32,33)
+
+Operator
+. Authmaetic operation (6)
+. Assignment operatiors (7)
+. Comparison operator (15)
+
+Statement
+. conditional statement (16,17)
+. Loop statement (19,21)
+. Loop & Array (22,23)
+. Function (24,25,26,27,28)
+. Loop & Ogbject (32)
+. property & Method (31)
+
+Refactoring (18)
+
+Web Browser
+. select element (12)
+. Attribute (12)
+
+CSS
+. Style attribute (9)
+. Sytle tag (10)
+. selector (11)
