@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>My Test Home</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="./css-test/style.css">
+    </head>
+
+    <body>
+      <h1><a href="./index.html">MyTest</a></h1>
+      <!--
+      <input type="button" value="night" onclick="
+        document.querySelector('body').style.background='black';
+        document.querySelector('body').style.color='white';
+      ">
+      <input type="button" value="day" onclick="
+        document.querySelector('body').style.background='white';
+        document.querySelector('body').style.color='black';
+      ">
+
+      <input id="night_day" type="button" value="night" onclick="
+        if(document.querySelector('#night_day').value === 'night') {
+          document.querySelector('body').style.background='black';
+          document.querySelector('body').style.color='white';
+          document.querySelector('#night_day').value = 'day';
+        } else {
+          document.querySelector('body').style.background='white';
+          document.querySelector('body').style.color='black';
+          document.querySelector('#night_day').value = 'night';
+        }
+      ">
+    -->
+        <input id="night_day" type="button" value="night" onclick="
+          var target = document.querySelector('body');
+          if(document.querySelector('#night_day').value === 'night') {
+            target.style.background='black';
+            target.style.color='white';
+            this.value = 'day';
+
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length) {
+              alist[i].style.color = 'powderblue';
+              i = i + 1;
+            }
+          } else {
+            target.style.background='white';
+            target.style.color='black';
+            this.value = 'night';
+
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length) {
+              alist[i].style.color = 'blue';
+              i = i + 1;
+            }
+          }
+        ">
+        <div id="grid">
+          <ol id="navi">
+            <li><a href="./1.html">HTML</a></li>
+            <li><a href="./2.html">CSS</a></li>
+            <li><a href="./3.html">JavaScript</a></li>
+            <li><a href="./IDMS/idcs-index.html">IDCS</a></li>
+        </ol>
+
+        <div id="article">
+          <p>
+          Hypertext Markup Language (HTML) is the standard markup language for
+          <strong>creating <u>web</u> pages</strong> and web applications. <br />
+
+          TAG - 이름 : 역할 - 설명 : HTML 기본 문법
+          <strong></strong>
+          <u></u>
+
+          <p>
+              W3C (The World Wide Web Consortium) : 국제민간표준화기구 <br />
+              <a href="https://www.w3.org/" target="_blank" title="html5 specfication">
+                  Hypertext Markup Language
+              </a>
+          </p>
+
+          Tag 예제 / 실습하기 <br />
+          <a href="https://www.w3schools.com/tags/" target="_blank">
+              https://www.w3schools.com/tags/
+          </a>
+          <p>
+              <h3>Templete Reference Sites</h3>
+              <ol>
+                  <li><a href="https://www.w3schools.com/tags/" target="_blank"> HTML Tag Reference </a></li>
+                  <li><a href="https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/about-custom-domains-and-github-pages" target="_blank">
+                      Github Pages Docs</a></li>
+                  <li><a href="https://www.samsung.com/sec/" target="_blank"> Samsung Homepage </a></li>
+              </ol>
+          </p>
+        </div>
+      </div>
+    </body>
+</html>
