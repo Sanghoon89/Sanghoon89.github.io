@@ -25,6 +25,7 @@
 .btn.red{
   background-color: #ff521e;
   border-bottom:5px solid #c1370e;
+  font-weight: bold;
 }
 .btn.red:active{
   border-bottom:2px solid #c1370e;
