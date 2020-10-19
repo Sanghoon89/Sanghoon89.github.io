@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+
+<head>
+    <style>
+        .tree {
+            color: #393939;
+        }
+        
+        .tree,
+        .tree ol,
+        .tree ul,
+        .tree li {
+            padding-left: 17px;
+            padding-bottom: 10px;
+        }
+        
+        .tree *:before {
+            width: 20px;
+            height: 30px;
+            display: inline-block;
+        }
+        
+        .tree label {
+            cursor: pointer;
+        }
+        
+        .tree a {
+            text-decoration: none;
+            color: #393939;
+        }
+        
+        .tree input[type="checkbox"] {
+            display: none;
+        }
+        
+        .tree input[type="checkbox"]:checked~ol {
+            display: none;
+        }
+        
+        .tree input[type="checkbox"]:checked~ul {
+            display: none;
+        }
+        
+        .MainMenu {
+            padding-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tree">
+        <ol>
+            <li class="MainMenu">
+                <input type="checkbox" id="root1">
+                <label for="root1">Initial Configrration</label>
+                <ol>
+                    <li>AIX Basic Environment</li>
+                    <li>AIX Basic Security Setting</li>
+                    <li>Installing & Configuring a TCPwrapper</li>
+                    <li>Configuring Setup.sh (/sbin/setup.sh)</li>
+                </ol>
+                <ul>
+                    <li class="quit">Return to the Previous (Main Menu)</li>
+                </ul>
+            </li>
+            <li class="MainMenu">
+                <input type="checkbox" id="root2">
+                <label for="root2">System Configuration</label>
+                <ol>
+                    <li>AIX Security vulnerability Setting</li>
+                    <li>
+                        <input type="checkbox" id="node23">
+                        <label for="node23">Creating Monitoring Shell</label>
+                        <ol>
+                            <li>monitor.sh Creation</li>
+                            <li>nmon.sh Creation</li>
+                            <li>installing EMS</li>
+                            <li>ierrpt_monitor.sh Creation (AIX Only)</li>
+                        </ol>
+                        <ul>
+                            <li>All Setting</li>
+                            <li>Return to the Previous (System Configuration)</li>
+                        </ul>
+                    </li>
+                    <li>Registering Crontab</li>
+                </ol>
+                <ul>
+                    <li class="quit">Return to the Previous (Main Menu)</li>
+                </ul>
+            </li>
+            <li class="MainMenu">
+                <input type="checkbox" id="root3">
+                <label for="root3">Application</label>
+                <ol>
+                    <li>
+                        <input type="checkbox" id="node31">
+                        <label for="node31">Installing TSM</label>
+                        <ol>
+                            <li>Installing TSM Client</li>
+                            <li>Registering Node</li>
+                            <li>Installing Atape for SAN Backup</li>
+                            <li>Installing Client for SAN Backup</li>
+                            <li>Configuring SAN Backup</li>
+                            <li>Schedule Management</li>
+                        </ol>
+                        <ul>
+                            <li>All Setting</li>
+                            <li>Return to the Previous (System Configuration)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="node32">
+                        <label for="node32">Installing EMCP</label>
+                        <ol>
+                            <li>Installing ODM</li>
+                            <li>Installing PowerPath</li>
+                            <li>Registering PowerPath key</li>
+                        </ol>
+                        <ul>
+                            <li>Return to the Previous (Installing EMCP)</li>
+                        </ul>
+                    </li>
+                    <li>Installing HACMP (AIX Only)</li>
+                    <li>Installing storcli (Linux Only)</li>
+                </ol>
+                <ul>
+                    <li class="quit">Return to the Previous (Main Menu)</li>
+                </ul>
+            </li>
+            <li class="MainMenu">
+                <input type="checkbox" id="root4">
+                <label for="root4">System Management</label>
+                <ol>
+                    <li>Check System Dump Size (AIX Only)</li>
+                    <li>Increasing paging space (AIX Only)</li>
+                    <li>Installing & configuring Rundeck</li>
+                    <li>perfMonitor Setup (After startup DBMS)</li>
+                    <li>backup OS Environment (for AIX)</li>
+                </ol>
+                <ul>
+                    <li class="quit">Return to the Previous (Main Menu)</li>
+                </ul>
+            </li>
+        </ol>
+        <ul>
+            <li><a href="../index.html">Quit</a></li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

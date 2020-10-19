@@ -7,7 +7,53 @@
     <link rel="stylesheet" href="./idcs-style.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/btn_style.css">
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
     <script src="color.js"></script>
+    <style>
+        .tree {
+            color: #393939;
+        }
+        
+        .tree,
+        .tree ol,
+        .tree ul,
+        .tree li {
+            padding-left: 17px;
+            padding-bottom: 10px;
+        }
+        
+        .tree *:before {
+            width: 20px;
+            height: 30px;
+            display: inline-block;
+        }
+        
+        .tree label {
+            cursor: pointer;
+        }
+        
+        .tree a {
+            text-decoration: none;
+            color: #393939;
+        }
+        
+        .tree input[type="checkbox"] {
+            display: none;
+        }
+        
+        .tree input[type="checkbox"]:checked~ol {
+            display: none;
+        }
+        
+        .tree input[type="checkbox"]:checked~ul {
+            display: none;
+        }
+        
+        .MainMenu {
+            padding-top: 15px;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -20,31 +66,104 @@
             <a href="../4.html" class="btn blue">DBMS</a>
             <a href="./idcs-index.html" class="btn red">IDCS</a>
         </div>
-        <!--      <ol id="navi">
-        <li><a href="../1.html">HTML</a></li>
-        <li><a href="../2.html">CSS</a></li>
-        <li><a href="../3.html">JavaScript</a></li>
-        <li><a href="./idcs-index.html" id="active">IDCS</a></li>
-      </ol>
--->
-        <div id="article">
+        <div id="article" class="tree">
             <a href="./idcs-index.html">
                 <img src="./Image/Interpark_logo.png" alt="Interpark Logo"></a>
-            <h4><a href="./idcs-all.html"> - Expand All Menu</a></h4>
-            <script>
-                var ListArray = new Array("Main Menu", "Initial Configuation", "System Configration", "Software Installation", "System Management");
-                document.write("<ol>");
-                for (var i = 0; i < ListArray.length; i++) {
-                    if (i === 0) {
-                        document.write("<ul><h4>" + ListArray[i] + "</h4></ul>");
-                    } else {
-                        document.write("<li><a href=\"./idcs-" + i + ".html\">");
-                        document.write(ListArray[i] + "</a></li><br>");
-                    }
-                }
-                document.write("</ol>");
-            </script>
-            <ul><a href="../index.html">Q. Quit</a></ul>
+            <ol>
+                <li class="MainMenu">
+                    <input type="checkbox" id="root1">
+                    <label for="root1">Initial Configrration</label>
+                    <ol>
+                        <li>AIX Basic Environment</li>
+                        <li>AIX Basic Security Setting</li>
+                        <li>Installing & Configuring a TCPwrapper</li>
+                        <li>Configuring Setup.sh (/sbin/setup.sh)</li>
+                    </ol>
+                    <ul>
+                        <li class="quit"><label for="root1">Return to the Previous (Main Menu)</label></li>
+                    </ul>
+                    <li class="MainMenu">
+                        <input type="checkbox" id="root2">
+                        <label for="root2">System Configuration</label>
+                        <ol>
+                            <li>AIX Security vulnerability Setting</li>
+                            <li>
+                                <input type="checkbox" id="node22">
+                                <label for="node22">Creating Monitoring Shell</label>
+                                <ol>
+                                    <li>monitor.sh Creation</li>
+                                    <li>nmon.sh Creation</li>
+                                    <li>installing EMS</li>
+                                    <li>ierrpt_monitor.sh Creation (AIX Only)</li>
+                                </ol>
+                                <ul>
+                                    <li>All Setting</li>
+                                    <li class="quit"><label for="root22">Return to the Previous (System Configuration)</label></li>
+                                </ul>
+                            </li>
+                            <li>Registering Crontab</li>
+                        </ol>
+                        <ul>
+                            <li class="quit"><label for="root2">Return to the Previous (Main Menu)</label></li>
+                        </ul>
+                    </li>
+                    <li class="MainMenu">
+                        <input type="checkbox" id="root3">
+                        <label for="root3">Application</label>
+                        <ol>
+                            <li>
+                                <input type="checkbox" id="node31">
+                                <label for="node31">Installing TSM</label>
+                                <ol>
+                                    <li>Installing TSM Client</li>
+                                    <li>Registering Node</li>
+                                    <li>Installing Atape for SAN Backup</li>
+                                    <li>Installing Client for SAN Backup</li>
+                                    <li>Configuring SAN Backup</li>
+                                    <li>Schedule Management</li>
+                                </ol>
+                                <ul>
+                                    <li>All Setting</li>
+                                    <li>Return to the Previous (System Configuration)</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="node32">
+                                <label for="node32">Installing EMCP</label>
+                                <ol>
+                                    <li>Installing ODM</li>
+                                    <li>Installing PowerPath</li>
+                                    <li>Registering PowerPath key</li>
+                                </ol>
+                                <ul>
+                                    <li>Return to the Previous (Installing EMCP)</li>
+                                </ul>
+                            </li>
+                            <li>Installing HACMP (AIX Only)</li>
+                            <li>Installing storcli (Linux Only)</li>
+                        </ol>
+                        <ul>
+                            <li class="quit"><label for="root3">Return to the Previous (Main Menu)</label></li>
+                        </ul>
+                    </li>
+                    <li class="MainMenu">
+                        <input type="checkbox" id="root4">
+                        <label for="root4">System Management</label>
+                        <ol>
+                            <li>Check System Dump Size (AIX Only)</li>
+                            <li>Increasing paging space (AIX Only)</li>
+                            <li>Installing & configuring Rundeck</li>
+                            <li>perfMonitor Setup (After startup DBMS)</li>
+                            <li>backup OS Environment (for AIX)</li>
+                        </ol>
+                        <ul>
+                            <li class="quit"><label for="root4">Return to the Previous (Main Menu)</label></li>
+                        </ul>
+                    </li>
+            </ol>
+            <ul>
+                <li><a href="../index.html">Quit</a></li>
+            </ul>
         </div>
     </div>
 </body>
